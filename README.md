@@ -23,3 +23,5 @@ The managed solution includes all of the components.
 
 ## Post Deployment: Power Automate Config
 The CDS connection needs to be set on the Power Automate called "Delete Accounts and Related Data where Retail Until Date has expired".
+NB: the user running the flow must have permissions to read the legal hold fields.
+The column security profile called "Legal Hold" provides this access.
