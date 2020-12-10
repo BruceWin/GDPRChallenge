@@ -338,4 +338,4 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
-#Tests.Incident.Plugins.UpdateRetainUntilDate/App.config
+Tests.Incident.Plugins.UpdateRetainUntilDate/App.config
