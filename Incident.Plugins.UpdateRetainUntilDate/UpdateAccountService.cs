@@ -18,16 +18,36 @@ namespace Incident.Plugins.UpdateRetainUntilDate
             this.tracingService = tracingService;
         }
 
-        public DateTime Add3Years(DateTime dateTime)
+        public void UpdateRetainUntilDate(DateTime incidentModifiedOn, EntityReference customerId, OptionSetValue status)
         {
-            return dateTime.AddYears(3);
-        }
+            tracingService.Trace($"Entered: {nameof(UpdateAccountService)}.{nameof(UpdateRetainUntilDate)}");
+            tracingService.Trace($"{nameof(incidentModifiedOn)}: {incidentModifiedOn} - {incidentModifiedOn.Kind}");
+            tracingService.Trace($"{nameof(customerId)}: {customerId?.Name} {customerId?.Id}");
+            tracingService.Trace($"{nameof(status)}: {status?.Value}");
 
-        public void UpdateRetainUntilDate(Guid accountId, DateTime retainUntilDate)
-        {
-            var record = new Entity(Metadata.Account.EntityLogicalName, accountId);
+            if (customerId == null)
+            {
+                tracingService.Trace("customer missing. stopping processing.");
+                return;
+            }
+            if (customerId?.LogicalName != Metadata.Account.EntityLogicalName)
+            {
+                tracingService.Trace("case not for an account. stopping processing.");
+                return;
+            }
+            if (status?.Value == 0)
+            {
+                tracingService.Trace("case is still active. stopping processing.");
+                return;
+            }
+
+            var retainUntilDate = incidentModifiedOn.AddYears(3);
+
+            tracingService.Trace($"Setting {Metadata.Account.RetainUntil} to {retainUntilDate}");
+            var record = new Entity(Metadata.Account.EntityLogicalName, customerId.Id);
             record[Metadata.Account.RetainUntil] = retainUntilDate;
             service.Update(record);
+            tracingService.Trace($"Update done.");
         }
     }
 }

@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MockOrganizationService.cs" />
     <Compile Include="MockTracingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

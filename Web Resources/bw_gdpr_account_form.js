@@ -1,8 +1,8 @@
-if (typeof (BW) === "undefined") {
-    BW = {
-        __namespace: true
-    };
-}
+'use strict';
+var BW = window.BW || {
+    __namespace: true
+};
+
 if (typeof (BW.Scripts) === "undefined") {
     BW.Scripts = {
         __namespace: true
