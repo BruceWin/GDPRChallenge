@@ -9,13 +9,26 @@ https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationToo
 
 Upload the JavaScript files as web resources to D365.
 
-## Tests
+## Unit Tests
+The unit test project is named UnitTests.UpdateRetainUntilDate.
+The test in this project are self contained and do not reach out to CDS (while the tests in the integration test project do).
+These tests could be executed within a build pipeline.
+
 Run the tests with VS2019 Test Explorer.
+
+## Integration Tests
+The integration test project is named IntegrationTests.UpdateRetainUntilDate.
+These tests connect to CDS.
+These tests are useful for during development.
+They allow for the code to be tested outside of the CDS event execution pipeline.
+
 Before running the test update the App.config file with crmUrl, clientId, and clientSecret.
 NB: do not check the test project App.config file into source control, as it contains credentials.
 
 The tests are integration tests rather than unit tests; please check the data in Dataverse after running the tests.
 Change the accountId and retainUntil for other test cases.
+
+Run the tests with VS2019 Test Explorer.
 
 ## Deployment
 Import the managed solution into CDS.
