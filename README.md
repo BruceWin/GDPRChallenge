@@ -9,9 +9,11 @@ https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationToo
 
 Upload the JavaScript files as web resources to D365.
 
+The scheduled process that deleted accounts and related data is built with Power Automate.
+
 ## Unit Tests
 The unit test project is named UnitTests.UpdateRetainUntilDate.
-The test in this project are self contained and do not reach out to CDS (while the tests in the integration test project do).
+The tests in this project are self contained and do not reach out to CDS (while the tests in the integration test project do).
 These tests could be executed within a build pipeline.
 
 Run the tests with VS2019 Test Explorer.
