@@ -13,16 +13,17 @@ The scheduled process that deleted accounts and related data is built with Power
 
 ## Unit Tests
 The unit test project is named UnitTests.UpdateRetainUntilDate.
-The tests in this project are self contained and do not reach out to CDS (while the tests in the integration test project do).
+The tests in this project are self contained and do not reach out to Dataverse (while the tests in the integration test project do).
 These tests could be executed within a build pipeline.
 
 Run the tests with VS2019 Test Explorer.
 
 ## Integration Tests
 The integration test project is named IntegrationTests.UpdateRetainUntilDate.
-These tests connect to CDS.
+These tests connect to Dataverse.
 These tests are useful for during development.
-They allow for the code to be tested outside of the CDS event execution pipeline.
+They allow for the code to be tested outside of the Dataverse event execution pipeline.
+The test within this project is basically a console app.
 
 Before running the test update the App.config file with crmUrl, clientId, and clientSecret.
 NB: do not check the test project App.config file into source control, as it contains credentials.
@@ -33,11 +34,11 @@ Change the accountId and retainUntil for other test cases.
 Run the tests with VS2019 Test Explorer.
 
 ## Deployment
-Import the managed solution into CDS.
+Import the managed solution into Dataverse.
 The managed solution includes all of the components.
 
 ## Post Deployment: Power Automate Config
-The CDS connection needs to be set on the Power Automate called "Delete Accounts and Related Data where Retail Until Date has expired".
+The Dataverse connection needs to be set on the Power Automate called "Delete Accounts and Related Data where Retail Until Date has expired".
 NB: the user running the flow must have permissions to read the legal hold fields.
 The column security profile called "Legal Hold" provides this access.
 
@@ -51,3 +52,6 @@ The Legal Hold fields on the account have a column (field) security profile "Leg
 
 There is JavaScript on the account form that shows an alert when a legal hold is applied.
 The JavaScript also sets "Legal Hold Reason" to business required.
+
+## Dataverse Solution
+The solution is provided as both managed and unmanaged under the Dataverse Solutions folder.
