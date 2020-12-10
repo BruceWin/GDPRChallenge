@@ -36,5 +36,3 @@ The Legal Hold fields on the account have a column (field) security profile "Leg
 
 There is JavaScript on the account form that shows an alert when a legal hold is applied.
 The JavaScript also sets "Legal Hold Reason" to business required.
-
-The field "Retain Until" on the Account table is timezone independent to avoid any complications with time zones. 
