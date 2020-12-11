@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incident.Plugins.UpdateRetainUntilDate", "Incident.Plugins.UpdateRetainUntilDate\Incident.Plugins.UpdateRetainUntilDate.csproj", "{0CE36F25-B38E-40F2-A19A-B20E746336B3}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Common", "Common\Common.shproj", "{2471058E-31BF-4360-A166-3AC82FC543D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Common", "Tests.Common\Tests.Common.csproj", "{B0ABD74D-C44D-41A4-804F-34C7AAC598FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests.UpdateRetainUntilDate", "Tests.Incident.Plugins.UpdateRetainUntilDate\IntegrationTests.UpdateRetainUntilDate.csproj", "{ACF80B7A-9B80-41FB-B531-A30F6D0BD633}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web Resources", "Web Resources", "{99E4F49C-79CC-4DAC-877C-C577987B6A22}"
+	ProjectSection(SolutionItems) = preProject
+		Web Resources\bw_gdpr_account_form.js = Web Resources\bw_gdpr_account_form.js
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.UpdateRetainUntilDate", "UnitTests.UpdateRetainUntilDate\UnitTests.UpdateRetainUntilDate.csproj", "{7108742F-D60A-495F-A245-B244641EAABC}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Common\Common.projitems*{0ce36f25-b38e-40f2-a19a-b20e746336b3}*SharedItemsImports = 4
+		Common\Common.projitems*{2471058e-31bf-4360-a166-3ac82fc543d1}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CE36F25-B38E-40F2-A19A-B20E746336B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE36F25-B38E-40F2-A19A-B20E746336B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE36F25-B38E-40F2-A19A-B20E746336B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE36F25-B38E-40F2-A19A-B20E746336B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0ABD74D-C44D-41A4-804F-34C7AAC598FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0ABD74D-C44D-41A4-804F-34C7AAC598FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0ABD74D-C44D-41A4-804F-34C7AAC598FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0ABD74D-C44D-41A4-804F-34C7AAC598FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF80B7A-9B80-41FB-B531-A30F6D0BD633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF80B7A-9B80-41FB-B531-A30F6D0BD633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF80B7A-9B80-41FB-B531-A30F6D0BD633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF80B7A-9B80-41FB-B531-A30F6D0BD633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7108742F-D60A-495F-A245-B244641EAABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7108742F-D60A-495F-A245-B244641EAABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7108742F-D60A-495F-A245-B244641EAABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7108742F-D60A-495F-A245-B244641EAABC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60BB0A09-4AB3-419B-8C77-6141F6E4143B}
+	EndGlobalSection
+EndGlobal
