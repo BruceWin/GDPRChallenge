@@ -39,6 +39,13 @@ The managed solution includes all of the components.
 
 ## Post Deployment: Power Automate Config
 The Dataverse connection needs to be set on the Power Automate called "Delete Accounts and Related Data where Retail Until Date has expired".
+1. Open the flow from https://flow.microsoft.com/
+2. Select Solutions 
+    * GDPR Challenge 
+    * Delete Accounts and Related Data where Retail Until Date has expired 
+    * Edit
+3. The current users credentials will be auto set on the flow, or you can update the flow with another account.
+
 NB: the user running the flow must have permissions to read the legal hold fields.
 The column security profile called "Legal Hold" provides this access.
 
